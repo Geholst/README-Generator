@@ -1,4 +1,5 @@
 const inquirer = require ('inquirer');
+const fs = require('fs');
 
 inquirer.prompt([
         {
@@ -22,9 +23,15 @@ inquirer.prompt([
                 message: 'Any instructions or examples for usage?',          
         },
         {
-            type: 'input',
+            type: 'checkbox',
             name: 'liscense',
-            message: 'What liscense do you want to use',          
+            message: 'What license do you want to use',  
+            choices: ['MIT',]        
+        },
+        {
+            type: 'input',
+            name: 'credits',
+            message: 'List any collaborators with links to their Github profile.',          
         },
         {
             type: 'input',
@@ -38,11 +45,53 @@ inquirer.prompt([
         },
         {
             type: 'input',
-            name: 'questions',
-            message: 'Eamil and Github so people can reach out?',          
+            name: 'Email',
+            message: 'Link your Eamil so people can reach out!',          
+        },
+        {
+            type: 'input',
+            name: 'github',
+            message: 'Link your Github so people can reach out!',          
         },
     ])
 
     .then(answers => {
-        console.log(answers)
+        let raedme = `
+        # ${answers.title}
+        ![Badge](https://img.shields.io/static/v1?label=MIT&message=License)
+
+        ## Description
+        ${answers.description}
+
+        ## Table of Contents
+        - [Installation](#installation)
+        - [Usage](#usage)
+        - [License](#license)
+        - [Credits](#credits)
+        - [Contributors](#contributions)
+        - [Test](#test)
+        - [Questions](#)
+
+        ## Installation
+        ${answers.installation}
+
+        ## Usage 
+        ${answers.usage}
+
+        ## License
+        ${answers.license}
+
+        ## Credits
+        ${answers.credits}
+
+        ## Contributors
+        ${answers.contributions}
+
+        ## Test
+        ${answers.test}
+
+        ## Questions
+        If you have any questions you can reach me at: [${answers.Email}][${answers.github}]
+
+        `
     })
