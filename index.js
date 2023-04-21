@@ -58,7 +58,7 @@ inquirer.prompt([
         let readme = `
 # ${answers.title}
 
-! [Badge](https://img.shields.io/static/v1?label=MIT&message=License)
+![Badge](https://img.shields.io/static/v1?label=MIT&message=License)
 
 ## Description
 ${answers.description}

@@ -16,6 +16,7 @@ Download from repo. Make sure you have inquirer installed.
 
 ## Usage 
 Here is a video demonstrating usage.
+https://youtu.be/NlNWotXE6cQ 
 
 ## Credits
 - I used this video to get a better understanding of using NOde and inquirer: https://www.youtube.com/watch?v=Qf5EXOyGRxw&t=703s 
