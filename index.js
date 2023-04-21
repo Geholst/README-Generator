@@ -54,44 +54,49 @@ inquirer.prompt([
             message: 'Link your Github so people can reach out!',          
         },
     ])
+    .then((answers) => {
+        let readme = `
+# ${answers.title}
 
-    .then(answers => {
-        let raedme = `
-        # ${answers.title}
-        ![Badge](https://img.shields.io/static/v1?label=MIT&message=License)
+! [Badge](https://img.shields.io/static/v1?label=MIT&message=License)
 
-        ## Description
-        ${answers.description}
+## Description
+${answers.description}
 
-        ## Table of Contents
-        - [Installation](#installation)
-        - [Usage](#usage)
-        - [License](#license)
-        - [Credits](#credits)
-        - [Contributors](#contributions)
-        - [Test](#test)
-        - [Questions](#)
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Credits](#credits)
+- [Contributors](#contributions)
+- [Test](#test)
 
-        ## Installation
-        ${answers.installation}
+## Installation
+${answers.installation}
 
-        ## Usage 
-        ${answers.usage}
+## Usage 
+${answers.usage}
 
-        ## License
-        ${answers.license}
+## License
+${answers.license}
 
-        ## Credits
-        ${answers.credits}
+## Credits
+${answers.credits}
 
-        ## Contributors
-        ${answers.contributions}
+## Contributors
+${answers.contributions}
 
-        ## Test
-        ${answers.test}
+## Test
+${answers.test}
 
-        ## Questions
-        If you have any questions you can reach me at: [${answers.Email}][${answers.github}]
+## Questions
+If you have any questions you can reach me at: [${answers.Email}][${answers.github}]
 
-        `
-    })
+`;
+            fs.writeFile("./README/README.md", readme, (err) => {
+            if (err) {
+                throw err;
+            }
+            console.log('complete');
+            });
+    });
