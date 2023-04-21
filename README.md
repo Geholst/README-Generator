@@ -1,35 +1,26 @@
- # ${answers.title}
-
-! [Badge](https://img.shields.io/static/v1?label=MIT&message=License)
+# <README-Generator>
 
 ## Description
-${answers.description}
+This program was made so a user can input what they want to put in a README, and it will be able to output a functional README.
 
 ## Table of Contents
- - [Installation](#installation)
- - [Usage](#usage)
- - [License](#license)
- - [Credits](#credits)
-  - [Contributors](#contributions)
- - [Test](#test)
 
- ## Installation
- ${answers.installation}
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
 
- ## Usage 
- ${answers.usage}
+## Installation
 
- ## License
- ${answers.license}
+Download from repo. Make sure you have inquirer installed.
 
- ## Credits
- ${answers.credits}
+## Usage 
+Here is a video demonstrating usage.
 
- ## Contributors
- ${answers.contributions}
+## Credits
+- I used this video to get a better understanding of using NOde and inquirer: https://www.youtube.com/watch?v=Qf5EXOyGRxw&t=703s 
+- I used this website to make sure I used the correct Markdown https://www.markdownguide.org/cheat-sheet/ 
 
- ## Test
- ${answers.test}
+## License
 
- ## Questions
-        If you have any questions you can reach me at: [${answers.Email}][${answers.github}]
+Refer to liscense in repo 
